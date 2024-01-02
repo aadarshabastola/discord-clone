@@ -1,37 +1,37 @@
 "use client";
 
-import { 
-    Tooltip, 
-    TooltipContent, 
+import {
+    Tooltip,
+    TooltipContent,
     TooltipProvider,
-     TooltipTrigger 
- } from "@radix-ui/react-tooltip";
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 
- interface ActionTooltipProps {
+interface ActionTooltipProps {
     label: string;
     children: React.ReactNode;
     side?: "top" | "right" | "bottom" | "left";
     align?: "start" | "center" | "end";
- }
+}
 
- export const ActionTooltip = ({
+export const ActionTooltip = ({
     label,
     children,
     side,
     align
- }: ActionTooltipProps) => {
-    return(
+}: ActionTooltipProps) => {
+    return (
         <TooltipProvider>
             <Tooltip delayDuration={50}>
                 <TooltipTrigger asChild>
                     {children}
                 </TooltipTrigger>
                 <TooltipContent side={side} align={align}>
-                    <p className=" font-semibold text-sm capitalize">
+                    <p className="font-semibold text-sm capitalize">
                         {label.toLowerCase()}
                     </p>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
     )
- }
+}

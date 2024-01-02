@@ -16,7 +16,7 @@ export const ServerHeader = ({
     role
 }: ServerHeaderProps) => {
     const { onOpen } = useModal();
-    
+
     const isAdmin = role === MemberRole.ADMIN;
     const isModerator = isAdmin || role == MemberRole.MODERATOR;
 
@@ -42,7 +42,7 @@ export const ServerHeader = ({
                 )}
                 {isAdmin && (
                     <DropdownMenuItem
-                    onClick={() => onOpen("editServer", { server })}
+                        onClick={() => onOpen("editServer", { server })}
                         className=" px-3 py-2 text-sm cursor-pointer">
                         Server Settings
                         <Settings className="h-4 w-4 ml-auto" />
@@ -50,6 +50,7 @@ export const ServerHeader = ({
                 )}
                 {isAdmin && (
                     <DropdownMenuItem
+                        onClick={() => onOpen("members", { server })}
                         className=" px-3 py-2 text-sm cursor-pointer">
                         Manage Members
                         <Users className="h-4 w-4 ml-auto" />
