@@ -120,7 +120,7 @@ export const ServerSidebar = async ({
                         ]} />
                 </div>
                 <Separator className="bg-zinc-200 dark:bg-zinc-700 rounded-md my-2" />
-                {textChannels?.length && (
+                {textChannels?.length !== 0 && (
                     <div className="mb-2">
                         <ServerSection
                             sectionType="channels"
@@ -130,7 +130,7 @@ export const ServerSidebar = async ({
                             label="Text Channels"
                         />
                         <div className="space-y-[2px]">
-                            {textChannels.map((channel) => (
+                            {textChannels?.map((channel) => (
                                 <ServerChannel
                                     key={channel.id}
                                     channel={channel}
@@ -141,7 +141,7 @@ export const ServerSidebar = async ({
                         </div>
 
                     </div>
-                )}{audioChannels?.length && (
+                )}{audioChannels?.length !== 0 && (
                     <div className="mb-2">
                         <ServerSection
                             sectionType="channels"
@@ -151,7 +151,7 @@ export const ServerSidebar = async ({
                             label="Voice Channels"
                         />
                         <div className="space-y-[2px]">
-                            {audioChannels.map((channel) => (
+                            {audioChannels?.map((channel) => (
                                 <ServerChannel
                                     key={channel.id}
                                     channel={channel}
@@ -163,7 +163,7 @@ export const ServerSidebar = async ({
                     </div>
 
                 )}
-                {videoChannels?.length && (
+                {videoChannels?.length !== 0 && (
                     <div className="mb-2">
                         <ServerSection
                             sectionType="channels"
@@ -173,7 +173,7 @@ export const ServerSidebar = async ({
                             label="Video Channels"
                         />
                         <div className="space-y-[2px]">
-                            {videoChannels.map((channel) => (
+                            {videoChannels?.map((channel) => (
                                 <ServerChannel
                                     key={channel.id}
                                     channel={channel}
@@ -185,7 +185,7 @@ export const ServerSidebar = async ({
                         </div>
                     </div>
                 )}
-                {members?.length && (
+                {members?.length !== 0 && (
                     <div className="mb-2">
                         <ServerSection
                             sectionType="members"
@@ -195,7 +195,7 @@ export const ServerSidebar = async ({
                             label="Members"
                         />
                         <div className="space-y-[2px]">
-                            {members.map((member) => (
+                            {members?.map((member) => (
                                 <ServerMember
                                 key={member.id}
                                 member={member}
