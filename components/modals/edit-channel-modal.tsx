@@ -47,9 +47,8 @@ const formSchema = z.object({
 export const EditChannelModal = () => {
     const { isOpen, onClose, type, data } = useModal()
     const router = useRouter();
-    const params = useParams();
 
-    const isModalOpen = isOpen && type === "editServer";
+    const isModalOpen = isOpen && type === "editChannel";
     const { channel, server } = data;
 
     const form = useForm({
