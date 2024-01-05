@@ -8,10 +8,10 @@ A discord clone created with ReactJS.
 - Action according to user roles
 
 ## Screenshots:
-<img src="./readme-components/4.png" width=500 alt="screenshot" />
-<img src="./readme-components/2.png" width=500 alt="screenshot" />
-<img src="./readme-components/3.png" width=500 alt="screenshot" />
-<img src="./readme-components/1.png" width=500 alt="screenshot" />
+<img src="./readme-components/4.png" width=400 alt="screenshot" />
+<img src="./readme-components/2.png" width=400 alt="screenshot" />
+<img src="./readme-components/3.png" width=400 alt="screenshot" />
+<img src="./readme-components/1.png" width=400 alt="screenshot" />
 
 ## Stack
 
